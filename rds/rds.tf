@@ -28,7 +28,7 @@ data "aws_security_group" "sg" {
 
 
 
-resource "aws_db_instance" "rds" {
+resource "aws_db_instance" "rds-gani" {
   allocated_storage      = 20
   identifier = "book-rds"
   db_subnet_group_name   = aws_db_subnet_group.sub-grp.id
@@ -62,5 +62,5 @@ resource "aws_db_subnet_group" "sub-grp" {
 
 
 output "rds_address" {
-  value = aws_db_instance.rds.address
+  value = aws_db_instance.rds-gani.address
 }
