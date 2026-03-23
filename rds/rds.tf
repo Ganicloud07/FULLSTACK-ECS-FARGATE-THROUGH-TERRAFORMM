@@ -31,7 +31,7 @@ data "aws_security_group" "sg" {
 resource "aws_db_instance" "rds" {
   allocated_storage      = 20
   identifier = "book-rds"
-  db_subnet_group_name   = aws_db_subnet_group.sub-grp.id
+  db_subnet_group_name   = aws_db_subnet_group.sub-grp.name
   engine                 = "mysql"
   engine_version         = "8.4.4"
   instance_class         = "db.t3.micro"
