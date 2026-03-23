@@ -38,7 +38,7 @@ resource "aws_db_instance" "rds" {
   multi_az               = true
   db_name                = "books-project"
   username               = "admin"
-  password               = "veeranarni"
+  password               = "gani123"
   skip_final_snapshot    = true
   vpc_security_group_ids = [data.aws_security_group.sg.id]
   depends_on = [ aws_db_subnet_group.sub-grp ]
